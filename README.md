@@ -77,11 +77,11 @@ from GetProxyIP import Carwl
 url_kuaidaili = ["https://www.kuaidaili.com/free/inha/%d" % (index + 1) for index in range(10,20)]
 Crawl().get_more_run(url_list)
 ```
-
+![](https://github.com/TOMO-CAT/ProxyIPPool/blob/master/get_more_run.jpg)
 
 * 当IP池太久没用时，需要对IP有效性进行验证，不符合要求的IP需要删除
 ```
 from GetProxyIP import Carwl
 Crawl().proxy_ip_validation()
 ```
-![1dc07d4708d6d8ec681fff1dbb952707.png](en-resource://database/509:1)
+![](https://github.com/TOMO-CAT/ProxyIPPool/blob/master/proxy_ip_validation.jpg)
