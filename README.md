@@ -85,3 +85,11 @@ from GetProxyIP import Carwl
 Crawl().proxy_ip_validation()
 ```
 ![](https://github.com/TOMO-CAT/ProxyIPPool/blob/master/proxy_ip_validation.jpg)
+
+## 问题&改进
+
+* 从代理IP网站抓取代理IP本质上也是爬虫，代理IP网站也设置了反爬机制，大概在xici获取4000个代理IP左右就会被封IP，从而需要使用代理来获取代理IP。
+* 和网上的经验不同，xici网前100页的代理IP可用率还是比较高的，基本上有九成。但是可能会有"检验有效的代理IP不一定能用"和"第一次检验失效的代理IP可能以后能用"的问题，这也是我将代理IP和有效的代理IP分别存储在两张表的原因。
+* 使用代理IP时，构建成http和https可能会导致截然不同的结果，同样，将目标url写成http或https可能会导致程序正常运行和报错两种结果。暂时我还不清楚原因。
+* 由于程序使用了网络，并且循环次数较多。因此我多次使用了continue跳出循环，但是获取有效的代理IP还是成功率比较高的。
+* 获取10000个代理IP的速度基本上需要五个小时，实在太慢了，后续如果改进程序的话可能会尝试多线程。
